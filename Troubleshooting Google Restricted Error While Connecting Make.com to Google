@@ -1,0 +1,33 @@
+Troubleshooting Google Restricted Error While Connecting Make.com to Google
+When connecting Make.com (formerly Integromat) to Google services, I encountered a "Google Restricted" error. Below is the detailed documentation of the steps I took to troubleshoot and resolve this issue.
+
+Step 1: Verify Google Account Permissions
+Checked Account Permissions: I ensured that I was logged into the correct Google account that had access to the necessary services such as Google Sheets and Google Drive.
+Reviewed OAuth Scopes: I confirmed that the scopes requested by Make.com matched what my application needed according to the Make.com documentation.
+Step 2: Access Google Cloud Console
+Navigated to Google Cloud Console: I went to Google Cloud Console.
+Selected My Project: Since I had multiple projects, I made sure to select the project associated with my Make.com integration.
+Step 3: Configure OAuth Consent Screen
+Accessed APIs & Services: In the left sidebar, I clicked on "APIs & Services" and then selected "OAuth consent screen".
+Filled Out Required Information:
+Completed all required fields including Application name, User support email, and Developer contact information.
+Added any necessary scopes that my application would require.
+Published My App: After ensuring compliance with Google's policies, I switched my app from development mode to production mode.
+Step 4: Enable Necessary APIs
+Enabled APIs: I returned to "APIs & Services" > "Library".
+Searched for and Enabled Required APIs: Specifically, I enabled the Google Sheets API and Google Drive API.
+Checked Quotas and Limits: Ensured that my usage was within limits for these APIs.
+Step 5: Create Credentials
+Created OAuth 2.0 Credentials:
+Navigated to "APIs & Services" > "Credentials".
+Clicked on “Create Credentials” and selected “OAuth client ID”.
+Chose the application type (Web application) and configured redirect URIs as specified by Make.com.
+Copied Client ID and Client Secret: After creating credentials, I copied both the Client ID and Client Secret for use in Make.com.
+Step 6: Connect Make.com with Updated Credentials
+Returned to Make.com: Went back to my scenario in Make.com where I was trying to connect Google services.
+Entered New Credentials if Required: When prompted for authorization, I entered the new Client ID and Client Secret.
+Reauthorized Access: Followed through with the authorization process again, ensuring all permissions were granted.
+Step 7: Test Connection
+Ran a Test Scenario: After reauthorizing, I executed a test scenario in Make.com that utilized the connected Google service.
+Monitored for Errors: If errors persisted, I checked logs in both Make.com and Google Cloud Console for additional details regarding failed requests or permissions issues.
+By following these steps systematically—verifying permissions, configuring settings in the Google Cloud Console, enabling necessary APIs, creating appropriate credentials, and testing connections—I successfully resolved the "Google Restricted" error encountered while connecting Make.com with Google's services.
